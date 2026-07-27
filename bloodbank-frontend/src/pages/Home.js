@@ -179,9 +179,9 @@ function Home() {
 
             <div className="col-md-4">
               <h5 className="text-uppercase">Contact</h5>
-              <p className="small mb-1">support@bloodbank.local</p>
-              <p className="small mb-1">+1 555-123-4567</p>
-              <p className="small">123 Donation Ave, City</p>
+              <p className="small mb-1">mahajanpranay464@gmail.com</p>
+              <p className="small mb-1"> +91 6265783880</p>
+              <p className="small">450445 Burhanpur, Madhya Pradesh</p>
             </div>
           </div>
 

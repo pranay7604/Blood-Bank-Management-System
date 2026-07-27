@@ -20,4 +20,15 @@ public class BloodStockService {
     public BloodStock saveBloodStock(BloodStock stock) {
         return bloodStockRepository.save(stock);
     }
+
+    // Search
+    public List<BloodStock> searchBloodStock(String bloodGroup) {
+        return bloodStockRepository
+                .findByBloodGroupContainingIgnoreCase(bloodGroup);
+    }
+
+    // Low Stock Alert
+    public List<BloodStock> getLowStock() {
+        return bloodStockRepository.findByUnitsLessThan(10);
+    }
 }

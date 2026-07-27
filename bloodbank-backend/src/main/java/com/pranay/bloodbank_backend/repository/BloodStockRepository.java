@@ -9,10 +9,11 @@ import java.util.Optional;
 public interface BloodStockRepository
         extends JpaRepository<BloodStock, Long> {
 
-    Optional<BloodStock> findByBloodGroup(
+    Optional<BloodStock> findByBloodGroup(String bloodGroup);
+
+    List<BloodStock> findByBloodGroupContainingIgnoreCase(
             String bloodGroup);
 
-    List<BloodStock>
-    findByBloodGroupContainingIgnoreCase(
-            String bloodGroup);
+    // Low stock alert
+    List<BloodStock> findByUnitsLessThan(int units);
 }

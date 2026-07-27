@@ -46,4 +46,9 @@ public class BloodStockController {
 
         return bloodStockRepository.findAll();
     }
+    @GetMapping("/low-stock")
+    public List<BloodStock> getLowStock() {
+
+        return bloodStockService.getLowStock();
+    }
 }
