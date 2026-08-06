@@ -19,7 +19,7 @@ function Hospitals() {
     const loadHospitals = async () => {
 
         const result = await axios.get(
-            "http://localhost:8080/hospitals"
+            "https://blood-bank-management-system-production-2572.up.railway.app/hospitals"
         );
 
         setHospitals(result.data);
@@ -40,7 +40,7 @@ function Hospitals() {
             if (isEdit) {
 
                 await axios.put(
-                    `http://localhost:8080/hospitals/${editId}`,
+                    `https://blood-bank-management-system-production-2572.up.railway.app/hospitals/${editId}`,
                     hospital
                 );
 
@@ -49,7 +49,7 @@ function Hospitals() {
             } else {
 
                 await axios.post(
-                    "http://localhost:8080/hospitals",
+                    "https://blood-bank-management-system-production-2572.up.railway.app/hospitals",
                     hospital
                 );
 
@@ -82,7 +82,7 @@ function Hospitals() {
         ) {
 
             await axios.delete(
-                `http://localhost:8080/hospitals/${id}`
+                `https://blood-bank-management-system-production-2572.up.railway.app/hospitals/${id}`
             );
 
             loadHospitals();

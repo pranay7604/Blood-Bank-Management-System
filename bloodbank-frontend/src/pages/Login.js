@@ -13,7 +13,7 @@ function Login() {
         try {
 
             const response = await axios.post(
-                "http://localhost:8080/auth/login",
+                "https://blood-bank-management-system-production-2572.up.railway.app/auth/login",
                 {
                     username,
                     password

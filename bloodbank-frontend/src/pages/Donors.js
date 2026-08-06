@@ -18,7 +18,7 @@ function Donors() {
 
     const loadDonors = async () => {
         const result = await axios.get(
-            "http://localhost:8080/donors"
+            "https://blood-bank-management-system-production-2572.up.railway.app/donors"
         );
 
         setDonors(result.data);
@@ -39,7 +39,7 @@ function Donors() {
             if (isEdit) {
 
                 await axios.put(
-                    `http://localhost:8080/donors/${editId}`,
+                    `https://blood-bank-management-system-production-2572.up.railway.app/donors/${editId}`,
                     donor
                 );
 
@@ -48,7 +48,7 @@ function Donors() {
             } else {
 
                 await axios.post(
-                    "http://localhost:8080/donors",
+                    "https://blood-bank-management-system-production-2572.up.railway.app/donors",
                     donor
                 );
 
@@ -81,7 +81,7 @@ function Donors() {
         ) {
 
             await axios.delete(
-                `http://localhost:8080/donors/${id}`
+                `https://blood-bank-management-system-production-2572.up.railway.app/donors/${id}`
             );
 
             loadDonors();

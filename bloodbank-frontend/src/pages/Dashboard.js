@@ -30,7 +30,7 @@ function Dashboard() {
     useEffect(() => {
 
         axios
-            .get("http://localhost:8080/dashboard")
+            .get("https://blood-bank-management-system-production-2572.up.railway.app/dashboard")
             .then((response) => {
                 setData(response.data);
             })
@@ -39,7 +39,7 @@ function Dashboard() {
             });
 
         axios
-            .get("http://localhost:8080/bloodstock/chart")
+            .get("https://blood-bank-management-system-production-2572.up.railway.app/bloodstock/chart")
             .then((response) => {
                 setBloodStockData(response.data);
             })
@@ -48,7 +48,7 @@ function Dashboard() {
             });
 
         axios
-            .get("http://localhost:8080/bloodstock/low-stock")
+            .get("https://blood-bank-management-system-production-2572.up.railway.app/bloodstock/low-stock")
             .then((response) => {
                 setLowStock(response.data);
             })

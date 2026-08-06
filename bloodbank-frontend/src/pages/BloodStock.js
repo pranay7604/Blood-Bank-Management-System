@@ -18,7 +18,7 @@ function BloodStock() {
     const loadStocks = async () => {
 
         const result = await axios.get(
-            "http://localhost:8080/bloodstock"
+            "https://blood-bank-management-system-production-2572.up.railway.app/bloodstock"
         );
 
         setStocks(result.data);
@@ -38,7 +38,7 @@ function BloodStock() {
             if (isEdit) {
 
                 await axios.put(
-                    `http://localhost:8080/bloodstock/${editId}`,
+                    `https://blood-bank-management-system-production-2572.up.railway.app/bloodstock/${editId}`,
                     stock
                 );
 
@@ -47,7 +47,7 @@ function BloodStock() {
             } else {
 
                 await axios.post(
-                    "http://localhost:8080/bloodstock",
+                    "https://blood-bank-management-system-production-2572.up.railway.app/bloodstock",
                     stock
                 );
 
@@ -75,7 +75,7 @@ function BloodStock() {
         if (window.confirm("Delete this stock?")) {
 
             await axios.delete(
-                `http://localhost:8080/bloodstock/${id}`
+                `https://blood-bank-management-system-production-2572.up.railway.app/bloodstock/${id}`
             );
 
             loadStocks();

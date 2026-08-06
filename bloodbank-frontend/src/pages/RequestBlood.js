@@ -14,7 +14,7 @@ function RequestBlood() {
         try {
 
             await axios.post(
-                "http://localhost:8080/requests",
+                "https://blood-bank-management-system-production-2572.up.railway.app/requests",
                 {
                     hospitalId,
                     bloodGroup,

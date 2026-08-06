@@ -16,7 +16,7 @@ function Requests() {
     const loadRequests = async () => {
 
         const result = await axios.get(
-            "http://localhost:8080/requests"
+            "https://blood-bank-management-system-production-2572.up.railway.app/requests"
         );
 
         setRequests(result.data);
@@ -33,7 +33,7 @@ function Requests() {
         };
 
         await axios.post(
-            "http://localhost:8080/requests",
+            "https://blood-bank-management-system-production-2572.up.railway.app/requests",
             request
         );
 
@@ -47,7 +47,7 @@ function Requests() {
     const approveRequest = async (id) => {
 
         await axios.put(
-            `http://localhost:8080/requests/approve/${id}`
+            `https://blood-bank-management-system-production-2572.up.railway.app/requests/approve/${id}`
         );
 
         loadRequests();
@@ -56,7 +56,7 @@ function Requests() {
     const rejectRequest = async (id) => {
 
         await axios.put(
-            `http://localhost:8080/requests/reject/${id}`
+            `https://blood-bank-management-system-production-2572.up.railway.app/requests/reject/${id}`
         );
 
         loadRequests();

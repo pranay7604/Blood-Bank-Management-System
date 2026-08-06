@@ -10,7 +10,7 @@ function BloodAvailability() {
 
         try {
 const response = await axios.get(
-    `http://localhost:8080/bloodstock/search`,
+    `https://blood-bank-management-system-production-2572.up.railway.app/bloodstock/search`,
     {
         params: {
             bloodGroup: bloodGroup

@@ -14,7 +14,7 @@ function DonorRegistration() {
         try {
 
             await axios.post(
-                "http://localhost:8080/donors",
+                "https://blood-bank-management-system-production-2572.up.railway.app/donors",
                 {
                     donorName,
                     bloodGroup,
