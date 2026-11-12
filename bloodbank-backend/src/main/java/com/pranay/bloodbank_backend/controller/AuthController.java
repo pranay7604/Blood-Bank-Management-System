@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/auth")
-@CrossOrigin("*")
+@CrossOrigin(origins = "https://blood-bank-management-system-sepia.vercel.app")
 public class AuthController {
 
     @Autowired
